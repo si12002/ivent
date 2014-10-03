@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  dtstart: 2014-10-03 19:34:56
+  dtend: 2014-10-03 19:34:56
+  location: MyString
+  lat: 1.5
+  lng: 1.5
+  summary: MyText
+
+two:
+  title: MyString
+  dtstart: 2014-10-03 19:34:56
+  dtend: 2014-10-03 19:34:56
+  location: MyString
+  lat: 1.5
+  lng: 1.5
+  summary: MyText
