@@ -1,4 +1,4 @@
-class Users::RegistrationsController < devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController
 	
 	def cancel
 		super
