@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+  <meta charset="utf-8">
+  <meta name=“viewport” content=“width=device-width, initital-scale=1”>
+
   <title>Ivent</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+  
+
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+  <div data-role="page">
+    <%= render 'layouts/nav_panel' %>
+    <%= render 'layouts/header' %>
+<!--
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>.
     <%= link_to 'Edit profile', edit_user_registration_path %> |
@@ -23,7 +38,12 @@
   <% if alert %>
     <p class="alert alert-error"><%= alert %></p>
   <% end %>
-<%= yield %>
+
+-->
+    <div data-role="content">
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>

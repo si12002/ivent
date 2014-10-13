@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'users/index'
-
-  get 'users/show'
+  #get 'users/index'
+  #get 'users/show'
 
   root 'home#index'  
   devise_for :users, :controllers => {
@@ -11,7 +10,7 @@ Rails.application.routes.draw do
     :passwords => "users/passwords"
   }
 
-  resources :events, :users, :only => [:index, :show]
+  resources :events, :users, :only => [:index, :show, :new]
 
 
 
