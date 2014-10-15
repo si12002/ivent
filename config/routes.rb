@@ -10,7 +10,8 @@ Rails.application.routes.draw do
     :passwords => "users/passwords"
   }
 
-  resources :events, :users, :only => [:index, :show, :new]
+  resources :events
+  resources :users, :only => [:index, :show, :new]
 
 
 
