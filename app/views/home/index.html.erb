@@ -1,10 +1,22 @@
-<p>こんにちは！</p>
+<% if current_user %>
+    <p><strong><%= current_user.name %></strong>さん、こんにちは</p>
+<% else %>
+    <p><strong>ゲスト</strong>さん、こんにちは</p>
+<% end %>
+
 
 <ul data-role="listview">
-<li><%= link_to "ホーム", root_path %></li>
-<li><%= link_to "ログイン", new_user_session_path %></li>
-<li><%= link_to "ユーザー登録", new_user_registration_path %></li>
+<li><%= link_to "ホーム", root_path %></li> 
+
+<% if current_user %>
 <li><%= link_to "イベント一覧", events_path %></li>
 <li><%= link_to "イベント作成", new_event_path %></li>
 <li><%= link_to "ユーザー変更", edit_user_registration_path %></li>
+<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+
+<% else %>
+<li><%= link_to "ユーザー登録", new_user_registration_path %></li>
+<li><%= link_to "ログイン", new_user_session_path %></li>
+
+<% end %>
 </ul>
