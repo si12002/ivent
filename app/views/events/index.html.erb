@@ -1,15 +1,15 @@
-<h1>Listing events</h1>
+<h1>イベント一覧</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Dtstart</th>
-      <th>Dtend</th>
-      <th>Location</th>
-      <th>Lat</th>
-      <th>Lng</th>
-      <th>Summary</th>
+      <th>イベント名</th>
+      <th>日時</th>
+      <!-- <th>Dtend</th> -->
+      <th>場所</th>
+      <!-- <th>Lat</th> -->
+      <!-- <th>Lng</th> -->
+      <!-- <th>Summary</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,14 +19,14 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.dtstart %></td>
-        <td><%= event.dtend %></td>
+       <!-- <td><%= event.dtend %></td> -->
         <td><%= event.location %></td>
-        <td><%= event.lat %></td>
-        <td><%= event.lng %></td>
-        <td><%= event.summary %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <td><%= event.lat %></td> -->
+        <!-- <td><%= event.lng %></td> -->
+        <!-- <td><%= event.summary %></td> -->
+        <td><%= link_to '詳細', event %></td>
+        <td><%= link_to '編集', edit_event_path(event) %></td>
+        <td><%= link_to '削除', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'イベントを作る', new_event_path %>

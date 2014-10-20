@@ -1,39 +1,39 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>イベント名:</strong>
   <%= @event.title %>
 </p>
 
 <p>
-  <strong>Dtstart:</strong>
+  <strong>開始日時:</strong>
   <%= @event.dtstart %>
 </p>
 
 <p>
-  <strong>Dtend:</strong>
+  <strong>終了日時:</strong>
   <%= @event.dtend %>
 </p>
 
 <p>
-  <strong>Location:</strong>
+  <strong>場所:</strong>
   <%= @event.location %>
 </p>
 
 <p>
-  <strong>Lat:</strong>
+  <strong>緯度:</strong>
   <%= @event.lat %>
 </p>
 
 <p>
-  <strong>Lng:</strong>
+  <strong>経度:</strong>
   <%= @event.lng %>
 </p>
 
 <p>
-  <strong>Summary:</strong>
+  <strong>内容:</strong>
   <%= @event.summary %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to '編集', edit_event_path(@event) %> |
+<%= link_to 'イベント一覧へ', events_path %>
