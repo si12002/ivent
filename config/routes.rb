@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :events
   resources :users, :only => [:index, :show, :new]
+  resources :entries
+  resources :manages
 
 
 
