@@ -25,10 +25,11 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
+    #@event.user_id = current_user.id
 
     respond_to do |format|
-      if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+      if @event.save && @event.manages.create(user_id: current_user.id)
+        format.html { redirect_to @event, notice: 'イベントを登録しました。.' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }

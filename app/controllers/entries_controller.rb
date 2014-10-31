@@ -1,4 +1,9 @@
 class EntriesController < ApplicationController
+	def index
+		#@user = User.all
+		@entry = Entry.all
+	end
+
 	def new
 		@entry = Entry.new
 	end
