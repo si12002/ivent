@@ -1,0 +1,26 @@
+<% if @entries.present? %>
+<table>
+  <thead>
+    <tr>
+      <th>登録No</th>
+      <th>ユーザーNo</th>
+      <th>名前</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entries.each do |entry| %>
+    <tr>
+      <td><%= entry.id %></td>
+      <td><%= entry.user_id %></td>
+      <td><%= entry.event_id %></td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+  <p>参加者はまだいません。</p>
+<% end %>
+
+<%= link_to "イベント一覧へ", events_path %>
