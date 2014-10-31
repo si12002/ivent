@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>No</th>
       <th>イベント名</th>
       <th>日時</th>
       <!-- <th>Dtend</th> -->
@@ -17,6 +18,7 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
+        <td><%= event.id %></td>
         <td><%= event.title %></td>
         <td><%= event.dtstart %></td>
        <!-- <td><%= event.dtend %></td> -->
