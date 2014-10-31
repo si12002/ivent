@@ -1,2 +1,20 @@
 <% provide(:title, @user.name) %>
-<h1>My page (<%= @user.name %>)</h1>
+<h1><%= @user.name %>さんのマイページ</h1>
+
+<p><strong>主催イベント一覧</strong></p>
+<ul>
+<% @user.manages.each do |manage| %>
+  <li>
+  <%= manage.event.title %>
+  </li>
+<% end %>
+</ul>
+
+<p><strong>参加イベント一覧</strong></p>
+<ul>
+<% @user.entries.each do |entry| %>
+  <li>
+  <%= entry.event.title %>
+  </li>
+<% end %>
+</ul>
