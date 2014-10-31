@@ -35,6 +35,24 @@
   <%= @event.summary %>
 </p>
 
+<p><strong>主催者一覧</strong></p>
+<ul>
+<% @event.manages.each do |manage| %>
+  <li>
+  <%= manage.user.name %>
+  </li>
+<% end %>
+</ul>
+
+<p><strong>参加者一覧</strong></p>
+<ul>
+<% @event.entries.each do |entry| %>
+  <li>
+  <%= entry.user.name %>
+  </li>
+<% end %>
+</ul>
+
 <%= link_to '参加する！', new_entry_path %><br>
 
 <%= link_to '編集', edit_event_path(@event) %> |
