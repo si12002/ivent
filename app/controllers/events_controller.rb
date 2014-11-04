@@ -10,6 +10,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    #@entry = Entry.new(user_id: current_user.id, event_id: @event.id)
   end
 
   # GET /events/new

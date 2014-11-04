@@ -7,7 +7,10 @@
 <ul>
 <% @user.manages.each do |manage| %>
   <li>
-  <%= link_to manage.event.title, manage.event %>
+  <%= manage.event.title %> 
+  <%= link_to '詳細', manage.event %> 
+  <%= link_to '編集', edit_event_path(manage.event) %> 
+  <%= link_to '削除', manage.event, method: :delete, data: { confirm: '本当に消してもよろしいですか?' } %>
   </li>
 <% end %>
 </ul>
