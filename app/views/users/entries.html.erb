@@ -1,0 +1,8 @@
+<p><strong>参加イベント</strong></p>
+<ul>
+<% @entries.each do |entry| %>
+  <li>
+  <%= link_to entry.event.title, entry.event %>
+  </li>
+<% end %>
+</ul>

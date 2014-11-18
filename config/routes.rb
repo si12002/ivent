@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :manages
 
 
+  get 'users/:id/entries', to: 'users#entries'
+  get 'users/:id/manages', to: 'users#manages'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

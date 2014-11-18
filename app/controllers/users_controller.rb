@@ -9,4 +9,14 @@ class UsersController < ApplicationController
   		redirect_to current_user
   	end
   end
+
+  def entries
+  	@user = User.find(params[:id])
+  	@entries = @user.entries
+  end
+
+  def manages
+  	@user = User.find(params[:id])
+  	@manages = @user.manages
+  end
 end

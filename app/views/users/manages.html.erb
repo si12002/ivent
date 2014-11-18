@@ -1,0 +1,8 @@
+<p><strong>主催イベント</strong></p>
+<ul>
+<% @manages.each do |manage| %>
+  <li>
+  <%= link_to manage.event.title, manage.event %>
+  </li>
+<% end %>
+</ul>
